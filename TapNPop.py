@@ -20,11 +20,6 @@ GAME_DURATION = 30 # Fixed at 30 seconds
 start_time = None
 game_active = True # Flag to control game state
 
-# --- Removed User Input for Game Duration Selection ---
-# Removed the get_game_duration() function
-# Removed the call to get_game_duration()
-# Removed time.sleep(2) confirmation pause
-
 # Function to draw the enemy
 def draw_enemy(image):
     cv2.circle(image, (x_enemy, y_enemy), ENEMY_RADIUS, (0, 200, 0), 5)
@@ -152,4 +147,5 @@ else:
         if cv2.waitKey(1) == ord('q'):
             break
 cap.release()
+
 cv2.destroyAllWindows()
